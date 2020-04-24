@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:oracle:thin:@119.3.4.214:1521:orcl</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+      <mapping resource="com/szt/sztycl/bean/test/KettleExecutetaskQueueEntity.hbm.xml"/>
+      <mapping class="com.szt.sztycl.bean.test.KettleExecutetaskQueueEntity"/>
+      <mapping resource="com/szt/sztycl/bean/test/KettleExecutetaskRelationYcEntity.hbm.xml"/>
+      <mapping class="com.szt.sztycl.bean.test.KettleExecutetaskRelationYcEntity"/>
+      <mapping resource="com/szt/sztycl/bean/test/KettleExecutetaskStatusEntity.hbm.xml"/>
+      <mapping class="com.szt.sztycl.bean.test.KettleExecutetaskStatusEntity"/>
+      <mapping resource="com/szt/sztycl/bean/test/KettleExecutetaskYcEntity.hbm.xml"/>
+      <mapping class="com.szt.sztycl.bean.test.KettleExecutetaskYcEntity"/>
+      <mapping resource="com/szt/sztycl/bean/test/KettleParamgroupEntity.hbm.xml"/>
+      <mapping class="com.szt.sztycl.bean.test.KettleParamgroupEntity"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+
+  <property name="hibernate.hbm2ddl.auto">update</property>
+</hibernate-configuration>
